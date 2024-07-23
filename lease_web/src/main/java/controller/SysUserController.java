@@ -70,6 +70,8 @@ public class SysUserController extends BaseController {
         String username = req.getParameter("username");
         SysUser sysUser = sysUserService.getUserByUserName(username);
 
+        System.out.println(sysUser);
+
         resp.setContentType("text/html");
 
         Result<Object> result = null;
@@ -81,4 +83,6 @@ public class SysUserController extends BaseController {
         WebUtils.writeJson(result,resp);
 
     }
+
+
 }
